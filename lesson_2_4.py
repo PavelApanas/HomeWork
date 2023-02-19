@@ -8,8 +8,8 @@ num2 = float(input("Введите 2 число: "))
 num3 = float(input("Введите 3 число: "))
 
 
-pos = sum(1 for num in [num1, num2, num3] if num > 0)
-neg = sum(1 for num in [num1, num2, num3] if num < 0)
+pos = (num1 > 0) + (num2 > 0) + (num3 > 0)
+neg = (num1 < 0) + (num2 < 0) + (num3 < 0)
 
 # pos = 0
 # neg = 0
