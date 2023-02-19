@@ -3,14 +3,9 @@
 #Пользователь вводит предложение, заменить все пробелы на "-" 2-мя
 #способами
 
-#variant_1
-s = input("Введите предложение: ")
-result = "-".join(s.split())
-print(result)
-
-
-#variant_2
 
 s = input("Введите предложение: ")
-result = s.replace(" ", "-")
-print(result)
+result_1 = "-".join(s.split())
+result_2 = s.replace(" ", "-")
+print(result_1)
+print(result_2)
