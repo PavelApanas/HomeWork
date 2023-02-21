@@ -4,12 +4,12 @@
 # буквы в текст введенный с клавиатуры
 
 txt = input("Input text: ")
-count = {}
+i = {}
 for x in txt:
     if x.isalpha():
-        if x in count:
-            count[x] += 1
+        if x in i:
+            i[x] += 1
         else:
-            count[x] = 1
+            i[x] = 1
 
-print(count)
+print(i)
