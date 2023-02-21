@@ -11,5 +11,4 @@ for x in txt:
             i[x] += 1
         else:
             i[x] = 1
-
 print(i)
