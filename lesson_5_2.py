@@ -16,7 +16,6 @@ def morse_encode(message):
         else:
             pass
     return ' '.join(encoded_message)
-
 message = 'Hello'
 encoded_message = morse_encode(message)
 print(f'Сообщение "{message}" в коде Морзе: {encoded_message}')
