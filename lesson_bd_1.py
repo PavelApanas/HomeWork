@@ -13,6 +13,7 @@ Base = declarative_base()
 
 
 
+
 class Status(Base):
     __tablename__ = 'statuses'
     id = Column(Integer, primary_key=True)
