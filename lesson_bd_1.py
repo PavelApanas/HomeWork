@@ -5,10 +5,12 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class Status(Base):
     __tablename__ = 'statuses'
     id = Column(Integer, primary_key=True)
     name = Column(String(10), unique=True)
+
 
 class User(Base):
     __tablename__ = 'users'
@@ -16,6 +18,7 @@ class User(Base):
     name = Column(String(24))
     email = Column(String(24), unique=True)
     orders = relationship("Order", backref="user")
+
 
 class Order(Base):
     __tablename__ = 'orders'
@@ -25,6 +28,7 @@ class Order(Base):
     status = relationship("Status")
     order_items = relationship("OrderItem", backref="order")
 
+
 class Product(Base):
     __tablename__ = 'products'
     id = Column(Integer, primary_key=True)
@@ -33,11 +37,13 @@ class Product(Base):
     category_id = Column(Integer, ForeignKey('categories.id'))
     category = relationship("Category")
 
+
 class Category(Base):
     __tablename__ = 'categories'
     id = Column(Integer, primary_key=True)
     name = Column(String(24), unique=True)
     products = relationship("Product", backref="category")
+
 
 class OrderItem(Base):
     __tablename__ = 'order_items'
