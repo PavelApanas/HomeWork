@@ -1,18 +1,18 @@
-# Импортируем необходимые библиотеки и модули
+
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 
-# Импортируем библиотеку alembic и настройки для ее работы
+
 from alembic.config import Config
 from alembic import command
 
-# Создаем экземпляр базового класса SQLAlchemy
+
 Base = declarative_base()
 
 
-# Определяем модели SQLAlchemy для таблиц базы данных
+
 class Status(Base):
     __tablename__ = 'statuses'
     id = Column(Integer, primary_key=True)
