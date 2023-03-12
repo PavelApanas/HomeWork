@@ -11,11 +11,9 @@ class Status(StatusBase):
 
     class Config:
         orm_mode = True
-
 class UserBase(BaseModel):
     name: str
     email: str
-
 class UserCreate(UserBase):
     password: str
 
