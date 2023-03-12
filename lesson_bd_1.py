@@ -77,7 +77,6 @@ command.upgrade(alembic_cfg, "head")
 import pandas as pd
 from pydantic import BaseModel
 
-# Определяем модели Pydantic для таблиц базы данных
 class StatusBase(BaseModel):
     name: str
 
