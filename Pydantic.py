@@ -67,7 +67,6 @@ class ProductCreate(ProductBase):
 class Product(ProductBase):
     id: int
     category: Category
-
     class Config:
         orm_mode = True
 
